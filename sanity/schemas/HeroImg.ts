@@ -4,7 +4,7 @@ export default {
     title : 'Hero Image',
     fields : [
         {
-            name : 'image',
+            name : 'image1',
             type : 'image',
             title : 'First Hero Image',
         },

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { ArrowRight } from "lucide-react";
 
 async function getData() {
-    const query = `*[_type == "product" && category2->name == "Newest"][0...3] | order(_createdAt desc) {
+    const query = `*[_type == "product" && category2->name == "Trending"][0...3] | order(_createdAt desc) {
         _id,
           price,
         name,
@@ -21,27 +21,13 @@ export default async function Newest() {
     const data: simplifiedProduct[] = await getData();
 
     return (
-        <div className="bg-white">
-        <div className="flex flex-col items-center justify-between gap-8 md:flex-row ml-4">
-            <div className="flex h-12 w-64 divide-x overflow-hidden rounded-lg border">
-                <Link href="/Men" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active :bg-gray-200">
-                    Men
-                </Link>
-                <Link href="/Women" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active :bg-gray-200">
-                    Women
-                </Link>
-                <Link href="/Kids" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active :bg-gray-200">
-                    Kids
-                </Link>
-            </div>
-        </div>
         <div className="mx-auto max-w-2x1 px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7x1 lg:px-8">
           <div className="flex justify-between items-center">
             <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-              New Arrivals
+              Trending
             </h2>
   
-            <Link className="text-primary flex items-center gap-x-1" href="/Newest">
+            <Link className="text-primary flex items-center gap-x-1" href="/Trending">
               See All{" "}
               <span>
                 <ArrowRight />
@@ -81,7 +67,6 @@ export default async function Newest() {
             ))}
           </div>
         </div>
-      </div>
     );
 
 }

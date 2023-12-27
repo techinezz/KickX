@@ -29,7 +29,7 @@ export default function Navbar() {
                                     {link.name}
                                 </Link>
                             ): (
-                                <Link className="text-lg font-semibold text-gray-600 transition duration-100 hover:te xt-primary" href={link.href}>
+                                <Link className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-primary" href={link.href}>
                                     {link.name}
                                 </Link>
                             )}

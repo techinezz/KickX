@@ -1,4 +1,4 @@
-import { simplifedProduct } from "../interface";
+import { simplifiedProduct } from "../interface";
 import { client } from "../lib/sanity";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -18,7 +18,7 @@ async function getData() {
     return data;
 }
 export default async function Newest() {
-    const data: simplifedProduct[] = await getData();
+    const data: simplifiedProduct[] = await getData();
 
     return (
         <div className="bg-white">
@@ -41,7 +41,7 @@ export default async function Newest() {
               Our Newest products
             </h2>
   
-            <Link className="text-primary flex items-center gap-x-1" href="/all">
+            <Link className="text-primary flex items-center gap-x-1" href="/Trending">
               See All{" "}
               <span>
                 <ArrowRight />
@@ -49,7 +49,7 @@ export default async function Newest() {
             </Link>
           </div>
   
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-6 xl:gap-x-8">
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
             {data.map((product) => (
               <div key={product._id} className="group relative">
                 <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80">

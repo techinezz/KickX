@@ -4,13 +4,14 @@ import { client } from "../lib/sanity";
 import Image from "next/image";
 
 async function getData(cateogry: string) {
-  const query = `*[_type == "product" && category->name == "${cateogry}"] {
+  const query = `*[_type == "product" && category->name == "${cateogry}" || category2->name == "${cateogry}"] {
         _id,
           "imageUrl": images[0].asset->url,
           price,
           name,
           "slug": slug.current,
-          "categoryName": category->name
+          "categoryName": category->name,
+          "categoryName2": category2->name
       }`;
 
   const data = await client.fetch(query);

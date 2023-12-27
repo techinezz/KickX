@@ -39,7 +39,15 @@ export default {
             to: [
                 {type: 'category'}
             ],
-        }
+        },
+        {
+            name: 'category2',
+            type: 'reference',
+            title: 'Product Category2',
+            to: [
+                {type: 'category'}
+            ],
+        },
         
     ],
 }

@@ -27,10 +27,10 @@ export default async function Newest() {
                 <Link href="/Men" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active :bg-gray-200">
                     Men
                 </Link>
-                <Link href="/Men" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active :bg-gray-200">
+                <Link href="/Women" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active :bg-gray-200">
                     Women
                 </Link>
-                <Link href="/Men" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active :bg-gray-200">
+                <Link href="/Kids" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active :bg-gray-200">
                     Kids
                 </Link>
             </div>
@@ -41,7 +41,7 @@ export default async function Newest() {
               Our Newest products
             </h2>
   
-            <Link className="text-primary flex items-center gap-x-1" href="/Trending">
+            <Link className="text-primary flex items-center gap-x-1" href="/Featured">
               See All{" "}
               <span>
                 <ArrowRight />

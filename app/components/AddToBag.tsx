@@ -1,33 +1,43 @@
 "use client";
 
-import { Button } from '@/components/ui/button';
-import { useShoppingCart } from 'use-shopping-cart';
-import { urlFor } from '../lib/sanity';
+import { Button } from "@/components/ui/button";
+import { useShoppingCart } from "use-shopping-cart";
+import { urlFor } from "../lib/sanity";
 
 export interface ProductCart {
-    name: string;
-    price: number;
-    description: string;
-    currency: string;
-    image: any;
+  name: string;
+  description: string;
+  price: number;
+  currency: string;
+  image: any;
+  price_id: string;
 }
 
-export default function AddToBag({name, price, description, currency, image}: ProductCart) {
+export default function AddToBag({
+  currency,
+  description,
+  image,
+  name,
+  price,
+  price_id,
+}: ProductCart) {
+  const { addItem, handleCartClick } = useShoppingCart();
 
-    const { addItem, handleCartClick } = useShoppingCart();
-
-    const product = {
-        name: name,
-        price: price,
-        description: description,
-        currency: currency,
-        image: urlFor(image).url(),
-        id: "adkaod",
-
-    };
-
-    return <Button onClick={() => {
-        addItem(product),
-        handleCartClick();
-    }}>Add to Bag</Button>
+  const product = {
+    name: name,
+    description: description,
+    price: price,
+    currency: currency,
+    image: urlFor(image).url(),
+    price_id: price_id,
+  };
+  return (
+    <Button
+      onClick={() => {
+        addItem(product), handleCartClick();
+      }}
+    >
+      Add To Cart
+    </Button>
+  );
 }

@@ -9,8 +9,8 @@ export default function CartProvider({ children }: { children: ReactNode }) {
       mode="payment"
       cartMode="client-only"
       stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
-      successUrl="http://localhost:3000/success"
-      cancelUrl="http://localhost:3000/cancel"
+      successUrl="https://kickx.vercel.app/success"
+      cancelUrl="https://kickx.vercel.app/cancel"
       currency="USD"
       billingAddressCollection={false}
       shouldPersist={true}

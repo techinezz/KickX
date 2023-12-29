@@ -40,7 +40,7 @@ export default function Navbar() {
                 </nav>
                 <div className=" flex divide-x border-r sm:border-l">
                     <Button onClick={() => handleCartClick()} variant={"outline"} className="flex flex-col gap-y-1.5 h-12  w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none">
-                        <ShoppingBag className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"/>
+                        <ShoppingBag className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-6"/>
                         <span className="hidden text-xs font-semibold text-gray-600 sm:block">Cart</span>
                     </Button>
                 </div>

@@ -1,20 +1,26 @@
 import { Button } from "@/components/ui/button";
-import { CheckCheck, Link } from "lucide-react";
+import { CheckCheck } from "lucide-react";
+import Link from "next/link";
 
-
-export default function StripeSuccess() {
-    <div className="mt-32 md:mx-w-[50vw] mx-auto">
-        <CheckCheck className="h-20 w-20 text-green-500 mx-auto my-6" />
+export default function stripeSuccess() {
+  return (
+    <div className="h-screen">
+      <div className="mt-32 md:max-w-[50vw] mx-auto">
+        <CheckCheck className="text-green-600 w-16 h-16 mx-auto my-6" />
         <div className="text-center">
-            <h3 className="text-2xl font-bold">Payment Successful!!!</h3>
-            <p>Thanks for your Purchase!!!</p>
+          <h3 className="md:text-2xl text-base text-gray-900 font-semibold text-center">
+            Payment Successful!!
+          </h3>
+          <p className="text-gray-600 my-2">
+            Thank you for the purchase! We hope you enjoy your new shoes!
+          </p>
+          <p>Have a great day!</p>
 
-            <Button asChild  className="mt-5">
-                <Link href="/">
-                    <a>Go Home</a>
-                </Link>
-            </Button>
+          <Button asChild className="mt-5">
+            <Link href="/">GO back</Link>
+          </Button>
         </div>
-
+      </div>
     </div>
+  );
 }

@@ -81,7 +81,6 @@ export default async function ProductPge({
               <span className="text-sm">2-4 Day Shipping</span>
             </div>
 
-            {/* Add this block where you want the dropdown to appear */}
             <div className="mb-6">
               <label htmlFor="size" className="block text-sm text-gray-700">Size</label>
               <select id="size" name="size" className="mt-1 block w-">

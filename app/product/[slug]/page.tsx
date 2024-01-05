@@ -32,6 +32,8 @@ export default async function ProductPge({
 }) {
   const data: fullProduct = await getData(params.slug);
 
+  const sizes = ["4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11",  "11.5", "12", "12.5"];
+
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-screen-xl px-4 md:px-8">
@@ -78,6 +80,19 @@ export default async function ProductPge({
               <Truck className="w-6 h-6" />
               <span className="text-sm">2-4 Day Shipping</span>
             </div>
+
+            {/* Add this block where you want the dropdown to appear */}
+            <div className="mb-6">
+              <label htmlFor="size" className="block text-sm text-gray-700">Size</label>
+              <select id="size" name="size" className="mt-1 block w-">
+                {sizes.map((size, index) => (
+                  <option key={index} value={size}>
+                    {size}
+                  </option>
+                ))}
+              </select>
+            </div>
+
 
             <div className="flex gap-2.5">
               <AddToBag
